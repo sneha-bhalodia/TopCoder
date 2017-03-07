@@ -24,7 +24,7 @@ names(locations)[2]<-"nucl2"
 names(locations)[3]<-"frequency"
 
 
-merged = merge(x = allTrain, y = locations, by.x = "position", by.y="position2", all = TRUE)
+merged = merge(x = allTrain, y = locations, by.x = "position", by.y="position2", all.x = TRUE, all.y = TRUE)
 na.aggregate(merged)
 
 classifyReads <- function(y,yhat) {
